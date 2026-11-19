@@ -1,8 +1,10 @@
 ---
 title: リファレンス
-description: 言語仕様・IR 仕様・コアライブラリ仕様。
+description: UnifiedMozaic のリファレンス。
 ---
 
 :::note
-この節はまだ書いていません。言語仕様・IR 仕様・コアライブラリ仕様を載せる予定です。
+この節はまだ書いていません。
 :::
+
+それまでは[ガイド](/ja/guide/overview/)を見てください。

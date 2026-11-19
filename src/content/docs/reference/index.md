@@ -1,8 +1,10 @@
 ---
 title: Reference
-description: Language, IR and core library specifications.
+description: Reference material for UnifiedMozaic.
 ---
 
 :::note
-This section has not been written yet. It will cover the language specification, the IR specification and the core library specification.
+This section has not been written yet.
 :::
+
+Until it is, see the [Guide](/guide/overview/).
