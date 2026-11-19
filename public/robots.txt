@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://docs.unifiedmozaic.org/sitemap-index.xml
