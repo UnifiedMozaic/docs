@@ -49,5 +49,6 @@ node src/cli.ts build examples/kernels.um --target host --emit-msl -o kernels   
 
 ## Next steps
 
-- The programs in [`examples/`](https://github.com/UnifiedMozaic/UnifiedMozaic/tree/main/examples) are runnable; each one doubles as a test (`// expect:` lines).
+- The programs in [Examples](/examples/) are runnable; each one doubles as a test (`// expect:` lines).
+- Read the [language guide](/guide/overview/).
 - Set up your [editor](/getting-started/editor/).

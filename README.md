@@ -30,6 +30,16 @@ Sections: Getting Started / Guide / Reference / Examples.
 
 English is the source of truth. Japanese pages live under `src/content/docs/ja/` at the same path as their English page. A page without a Japanese version falls back to English, with a notice.
 
+## Regenerating the Examples
+
+The pages under `src/content/docs/examples/` and `src/content/docs/ja/examples/` are generated from the main repository's `examples/*.um`. Do not edit them by hand.
+
+```sh
+npm run gen:examples -- ../UnifiedMozaic   # path to a checkout of UnifiedMozaic/UnifiedMozaic
+```
+
+The code is quoted as it is; expected output comes only from `// expect:` lines. English summaries are in `scripts/examples-en.json` (a translation of each file's leading comment). A new example without an English summary makes the script fail.
+
 ## Code highlighting
 
 Code blocks tagged `um` (or `unifiedmozaic`) are highlighted with the grammar from [UnifiedMozaic/vscode-extension](https://github.com/UnifiedMozaic/vscode-extension) (`syntaxes/unifiedmozaic.tmLanguage.json`), loaded into Expressive Code (Shiki) in `astro.config.mjs`. To update the copy:

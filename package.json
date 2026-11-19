@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "sync:grammar": "node scripts/sync-grammar.mjs"
+    "sync:grammar": "node scripts/sync-grammar.mjs",
+    "gen:examples": "node scripts/gen-examples.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.43.1",

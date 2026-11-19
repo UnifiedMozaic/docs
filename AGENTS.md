@@ -7,3 +7,10 @@ These apply to people and AI agents alike.
 3. **Code samples are real.** Prefer programs that exist in the main repository's `examples/` and quote them as they are. Write expected output only when the source states it (for example `// expect:` lines or the README).
 4. **Two colours.** The logo and the site theme use black and white only (see `assets/logo/README.md` in the main repository).
 5. Tag UnifiedMozaic code blocks with `um`.
+
+## Current sources
+
+- **Getting Started**: `README.md` / `README.ja.md` and `docs/setup.md` / `docs/setup.ja.md` of the main repository.
+- **Guide**: `docs/guide.ja.md` of the main repository. It exists only in Japanese, so the English Guide pages are a translation of it. When the English original is written, it becomes the source.
+- **Examples**: generated from `examples/*.um` with `npm run gen:examples` (see README.md).
+- **Reference**: not written yet. The language, IR and core library specifications are not public.

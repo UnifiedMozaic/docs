@@ -49,5 +49,6 @@ node src/cli.ts build examples/kernels.um --target host --emit-msl -o kernels   
 
 ## 次に
 
-- [`examples/`](https://github.com/UnifiedMozaic/UnifiedMozaic/tree/main/examples) のプログラムはどれも動き、テストを兼ねています（`// expect:` の行）。
+- [サンプル](/ja/examples/)のプログラムはどれも動き、テストを兼ねています（`// expect:` の行）。
+- [言語ガイド](/ja/guide/overview/)を読む。
 - [エディタ](/ja/getting-started/editor/)を用意する。
