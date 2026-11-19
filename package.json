@@ -1,0 +1,23 @@
+{
+  "name": "unifiedmozaic-docs",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT OR Apache-2.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "sync:grammar": "node scripts/sync-grammar.mjs"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.43.1",
+    "astro": "^7.4.13",
+    "sharp": "^0.35.5"
+  },
+  "engines": {
+    "node": ">=22.23.4"
+  }
+}

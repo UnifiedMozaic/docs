@@ -1,0 +1,56 @@
+/*
+ * The UnifiedMozaic identity uses two colours only: black and white
+ * (see assets/logo/README.md in UnifiedMozaic/UnifiedMozaic).
+ * Starlight's blue-tinted greys and blue accent are replaced with neutral
+ * greys, and the accent is black (light mode) or white (dark mode).
+ */
+
+/* Dark mode */
+:root {
+	--sl-color-white: #fff;
+	--sl-color-gray-1: hsl(0, 0%, 92%);
+	--sl-color-gray-2: hsl(0, 0%, 78%);
+	--sl-color-gray-3: hsl(0, 0%, 58%);
+	--sl-color-gray-4: hsl(0, 0%, 38%);
+	--sl-color-gray-5: hsl(0, 0%, 22%);
+	--sl-color-gray-6: hsl(0, 0%, 12%);
+	--sl-color-black: #000;
+
+	--sl-color-accent-low: hsl(0, 0%, 20%);
+	--sl-color-accent: #fff;
+	--sl-color-accent-high: #fff;
+
+	--sl-color-backdrop-overlay: hsla(0, 0%, 0%, 0.66);
+}
+
+/* Light mode */
+:root[data-theme='light'] {
+	--sl-color-white: #000;
+	--sl-color-gray-1: hsl(0, 0%, 12%);
+	--sl-color-gray-2: hsl(0, 0%, 22%);
+	--sl-color-gray-3: hsl(0, 0%, 38%);
+	--sl-color-gray-4: hsl(0, 0%, 58%);
+	--sl-color-gray-5: hsl(0, 0%, 78%);
+	--sl-color-gray-6: hsl(0, 0%, 94%);
+	--sl-color-gray-7: hsl(0, 0%, 97%);
+	--sl-color-black: #fff;
+
+	--sl-color-accent-low: hsl(0, 0%, 88%);
+	--sl-color-accent: #000;
+	--sl-color-accent-high: #000;
+
+	--sl-color-backdrop-overlay: hsla(0, 0%, 100%, 0.66);
+}
+
+/* Links are told apart by an underline rather than a colour. */
+.sl-markdown-content a:not(:where(.not-content *)) {
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+/* Asides (note / tip / caution / danger) in black and white too. */
+.starlight-aside.starlight-aside {
+	--sl-color-asides-text-accent: var(--sl-color-white);
+	--sl-color-asides-border: var(--sl-color-white);
+	background-color: var(--sl-color-gray-6);
+}

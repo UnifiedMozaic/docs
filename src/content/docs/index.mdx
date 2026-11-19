@@ -1,0 +1,45 @@
+---
+title: UnifiedMozaic
+description: A small, statically typed language with TypeScript-like syntax that compiles to native executables and WebAssembly, with CPU and GPU code in the same source.
+template: splash
+hero:
+  tagline: One language. Every core.
+  image:
+    light: ../../assets/logo-black.svg
+    dark: ../../assets/logo-white.svg
+    alt: UnifiedMozaic logo
+  actions:
+    - text: Get started
+      link: /getting-started/overview/
+      icon: right-arrow
+    - text: GitHub
+      link: https://github.com/UnifiedMozaic/UnifiedMozaic
+      icon: external
+      variant: minimal
+---
+
+UnifiedMozaic is a small, statically typed language with TypeScript-like syntax. It compiles through LLVM to native executables and WebAssembly, with no garbage collector, and lets you write CPU and GPU code in the same `.um` source.
+
+:::caution[Status: experimental]
+The language and its runtime are developed by one person and change often.
+:::
+
+```um
+struct Particle {
+  pos: f32;
+  vel: f32;
+}
+
+// A kernel runs once per index, on the CPU (all cores) or on the GPU.
+kernel function integrate(i: u32, ps: mut Buffer<Particle>, dt: f32): void {
+  ps[i].pos = ps[i].pos + ps[i].vel * dt;
+}
+
+export function main(): i32 {
+  let ps = new Buffer<Particle>(1000);        // fixed length, zero-filled
+  ps[0].vel = 2;
+  dispatch(integrate, ps.length, mut ps, 0.5);
+  print(ps[0].pos);                           // 1
+  return 0;
+}
+```

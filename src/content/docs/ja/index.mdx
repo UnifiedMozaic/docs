@@ -1,0 +1,45 @@
+---
+title: UnifiedMozaic
+description: TypeScript 風の文法で書く静的型の小さな言語。GC なしのネイティブバイナリと WebAssembly にコンパイルし、CPU と GPU のコードを同じソースに書けます。
+template: splash
+hero:
+  tagline: One language. Every core.
+  image:
+    light: ../../../assets/logo-black.svg
+    dark: ../../../assets/logo-white.svg
+    alt: UnifiedMozaic のロゴ
+  actions:
+    - text: はじめる
+      link: /ja/getting-started/overview/
+      icon: right-arrow
+    - text: GitHub
+      link: https://github.com/UnifiedMozaic/UnifiedMozaic
+      icon: external
+      variant: minimal
+---
+
+TypeScript 風の文法で書く、静的型の小さな言語です。LLVM を通して、GC なしのネイティブバイナリと WebAssembly にコンパイルします。CPU と GPU のコードを同じソース（`.um`）に書けます。
+
+:::caution[実験的なプロジェクトです]
+1 人で開発していて、言語もランタイムもよく変わります。
+:::
+
+```um
+struct Particle {
+  pos: f32;
+  vel: f32;
+}
+
+// kernel は添字ごとに 1 回ずつ、CPU（全コア）か GPU で実行される。
+kernel function integrate(i: u32, ps: mut Buffer<Particle>, dt: f32): void {
+  ps[i].pos = ps[i].pos + ps[i].vel * dt;
+}
+
+export function main(): i32 {
+  let ps = new Buffer<Particle>(1000);        // 長さ固定、ゼロ埋め
+  ps[0].vel = 2;
+  dispatch(integrate, ps.length, mut ps, 0.5);
+  print(ps[0].pos);                           // 1
+  return 0;
+}
+```
